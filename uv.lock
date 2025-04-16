@@ -1168,7 +1168,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "crewai", extras = ["tools"] },
-    { name = "uipath", specifier = ">=2.0.9" },
+    { name = "uipath", specifier = ">=2.0.11" },
     { name = "weave", specifier = ">=0.51.42" },
 ]
 
@@ -2413,6 +2413,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/66/94/68e2e17afaa9169cf6412ab0f28623903be73d1b32e208d9e8e541bb086d/parso-0.8.4.tar.gz", hash = "sha256:eb3a7b58240fb99099a345571deecc0f9540ea5f4dd2fe14c2a99d6b281ab92d", size = 400609 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/c6/ac/dac4a63f978e4dcb3c6d3a78c4d8e0192a113d288502a1216950c41b1027/parso-0.8.4-py2.py3-none-any.whl", hash = "sha256:a418670a20291dacd2dddc80c377c5c3791378ee1e8d12bffc35420643d43f18", size = 103650 },
+]
+
+[[package]]
+name = "pathlib"
+version = "1.0.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/ac/aa/9b065a76b9af472437a0059f77e8f962fe350438b927cb80184c32f075eb/pathlib-1.0.1.tar.gz", hash = "sha256:6940718dfc3eff4258203ad5021090933e5c04707d5ca8cc9e73c94a7894ea9f", size = 49298 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/78/f9/690a8600b93c332de3ab4a344a4ac34f00c8f104917061f779db6a918ed6/pathlib-1.0.1-py3-none-any.whl", hash = "sha256:f35f95ab8b0f59e6d354090350b44a80a80635d22efdedfa84c7ad1cf0a74147", size = 14363 },
 ]
 
 [[package]]
@@ -3759,11 +3768,13 @@ wheels = [
 
 [[package]]
 name = "uipath"
-version = "2.0.9"
+version = "2.0.11"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "click" },
     { name = "httpx" },
+    { name = "opentelemetry-sdk" },
+    { name = "pathlib" },
     { name = "pydantic" },
     { name = "pytest-asyncio" },
     { name = "python-dotenv" },
@@ -3772,9 +3783,9 @@ dependencies = [
     { name = "tomli" },
     { name = "types-requests" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/ca/b2/4be1b45c55be25428fd4b229cf9554a46f6ecd2abc076c6cd7bed9903137/uipath-2.0.9.tar.gz", hash = "sha256:5de6678bd3dd4cc4e97f0e5635a8c7f41a9736b1a7a40ebd3888753764f85be3", size = 210455 }
+sdist = { url = "https://files.pythonhosted.org/packages/cf/e4/dbb4995755fd7b08cda1d8988cd592dbb7a5995b125f9f05a29d3e1a72af/uipath-2.0.11.tar.gz", hash = "sha256:e0f278c3a10f54f5f15985907b0ad3dadd6941e0b4a5ec0ef43337287238c2cc", size = 223460 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/d7/74/f34b9b7db516e0c2e569618bd693a116f37e7b5f5bdd73e3db3cdcdc34c7/uipath-2.0.9-py3-none-any.whl", hash = "sha256:37212e2494c300aef08a593f4dcbbb1234dc7c26d2d665c2fe671dcd486ee286", size = 86475 },
+    { url = "https://files.pythonhosted.org/packages/de/ff/151fb42ccdbd9339c1f916599564dcc5461644ae6febedf69c2017954f9f/uipath-2.0.11-py3-none-any.whl", hash = "sha256:24a60a7388823ae6f2960a47a0e3ab6dc13c24b164d2f46fb440307e231043d0", size = 92044 },
 ]
 
 [[package]]

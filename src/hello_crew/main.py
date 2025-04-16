@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import sys
 import warnings
+from dataclasses import dataclass
 
 from datetime import datetime
 
@@ -13,17 +14,28 @@ warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 # Replace with inputs you want to test with, it will automatically
 # interpolate any tasks and agents information
 
-def run():
+@dataclass
+class Input:
+    topic: str
+
+
+@dataclass
+class Output:
+    report: str
+
+
+def run(input: Input) -> Output:
     """
     Run the crew.
     """
     inputs = {
-        'topic': 'AI LLMs',
+        'topic': input.topic,
         'current_year': str(datetime.now().year)
     }
-    
+
     try:
-        HelloCrew().crew().kickoff(inputs=inputs)
+        output = HelloCrew().crew().kickoff(inputs=inputs)
+        return Output(report=output.raw)
     except Exception as e:
         raise Exception(f"An error occurred while running the crew: {e}")
 
