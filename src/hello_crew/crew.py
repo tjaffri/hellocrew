@@ -6,7 +6,8 @@ import os
 import weave
 
 
-weave.init(project_name="hello_crew")
+if os.getenv('WANDB_API_KEY'):
+    weave.init(project_name="hello_crew")
 
 @CrewBase
 class HelloCrew:
